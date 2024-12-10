@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-image: url("https://i.pinimg.com/736x/aa/5d/86/aa5d8692b9e138860da73677cc2af715.jpg");           
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        #heading{
+            color: rgb(237, 55, 237);
+            text-align: center;
+            margin-top: 20px;
+            font-size: 40px;
+        }
+        #Instructions{
+            margin-left: 40px;
+            padding: 10px;
+        }
+        #Instructions h3{
+            color: rgb(241, 61, 61);
+            font-size: 25px;
+        }
+        #Instructions ul{
+            font-size: 25px;
+        }
+        .VideosDiv {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            padding: 10px;
+        }
+        .VideosDiv h3{
+            color: green;
+        }
+        iframe{
+            width:650px;
+            height: 350px;
+            border-radius: 10px;
+        } 
+        @media screen and (max-width:426px){
+            iframe{
+                width: 350px;
+            }
+            .VideosDiv{
+                flex-direction: column;
+                flex-wrap: wrap;
+                padding: 5px;
+            }
+        }   
+        @media screen and (min-width:426px) and (max-width:768px){
+            .VideosDiv{
+                flex-direction: column;
+                /* flex-wrap: wrap; */
+                padding: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="heading">More About Breathing Exercises</h1>
+
+    <h2 style="margin-left: 10px; margin-top: 20px; color: rgb(100, 100, 252);">Here are some breathing exercises you can try:</h2>
+
+    <div id="Instructions">
+        <h3>Diaphragmatic Breathing (Belly Breathing)</h3>
+        <ul>
+            <li>Inhaling slowly through your nose while paying attention to your belly rising</li>
+            <li>Exhaling through your mouth for at least two to three times as long as your inhale</li>
+            <li>Relaxing your neck and shoulders</li>
+        </ul>
+        <h3>Deep breathing</h3>
+        <ul>
+            <li>Inhaling slowly through your nose to a count of four or five</li>
+            <li>Exhaling slowly through your nose to a count of four or five</li>
+            <li>Making sure your stomach rises when you inhale, not your chest</li>
+            <li>Visualizing pushing your belly button to your spine when you exhale</li>
+        </ul>
+        <h3>Equal breathing</h3>
+        <ul>
+            <li>Inhaling and exhaling through your nose for the same length of time</li>
+            <li>Counting during each inhale and exhale to make sure they are even</li>
+            <li>Repeating a word or short phrase during each inhale and exhale</li>
+            <li>Pausing briefly after each inhale and exhale</li>
+        </ul>
+    </div>
+
+    <div class="VideosDiv">
+        <div>
+            <iframe  src="https://www.youtube.com/embed/Dx112W4i5I0?si=qnXFB2brFxekNKzd" title="YouTube video player" 
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div>
+            <h3>60 Second Breathing Exercise for Anxiety</h3>
+        </div>
+    </div>
+    
+    <div class="VideosDiv">
+        <div>
+            <iframe src="https://www.youtube.com/embed/395ZloN4Rr8?si=t2ThlI_WoCn-EwI9" title="YouTube video player" 
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div>
+            <h3>Pranayama is a breath-control technique. In Sanskrit, pran means life and ayama means way. Pranayama can help you regulate your 
+                system, alter your mood and ensure longevity. These pranayamas are simple, but very effective tool for relaxation.</h3>
+        </div>
+    </div>
+
+    <div class="VideosDiv">
+        <div>
+            <iframe src="https://www.youtube.com/embed/odADwWzHR24?si=xeaS24A3kEkXNcab" title="YouTube video player" 
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div>
+            <h3>Breathing exercises can be a great way to help relieve stress and anxiety. This video focuses on two relaxing breathing techniques:
+                 Square breathing (aka box breathing, 4x4 breathing, 4-part breath, etc.) and Pursed breathing.</h3>
+        </div>
+    </div>
+
+    <div class="VideosDiv">
+        <div>
+            <iframe src="https://www.youtube.com/embed/7Ep5mKuRmAA?si=K2qOFG2I56IoLLYY" title="YouTube video player" 
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div>
+            <h3>Living with a chronic disease can often result in extra stress and anxiety, especially for children.By following the steps 
+                presented in the video, viewers will learn how to complete a belly breathing exercise that can be done anywhere at any time. 
+                Belly breathing is a great way to calm the body and mind.</h3>
+        </div>
+    </div>
+
+    <div class="VideosDiv">
+        <div>
+            <iframe src="https://www.youtube.com/embed/LiUnFJ8P4gM?si=zJ7QjPW1qbtTVuC6" title="YouTube video player" 
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div>
+            <h3>Enjoy deep relaxation and increase lung capacity with this ten minute version of the 4-7-8 breathing technique. The breaths 
+                gradually slow and extend to an ideal calming pace.it promotes relaxation and can also be used to help you fall asleep in a 
+                shorter period of time.</h3>
+        </div>
+    </div>
+
+</body>
+</html>

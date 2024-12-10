@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url("https://static.vecteezy.com/system/resources/thumbnails/009/288/486/small/abstract-colorful-circles-illustration-background-light-multicolor-pattern-flat-design-style-vector.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.navbar{
+    background-color: rgb(212, 252, 240);
+}
+.navbar-nav{
+    margin-left: auto;
+    gap: 20px;
+}
+.nav-link{
+    color: rgb(200, 84, 200);;
+    font-size: 20px;
+}
+.nav-link:hover{
+    background-color: lightcoral;
+}
+button{
+    padding: 5px;
+    margin-top: 10px ;
+    background-color: rgb(253, 46, 46);
+    font-weight: 600;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px black;
+}
+button:hover{
+    background-color: rgb(58, 219, 58);
+    opacity: 0.8;
+    translate: 40px;
+    /* box-shadow: 3px 3px 3px black; */
+}
+.TimerSection div{
+    text-align: center;
+    padding: 70px;
+}
+.TimerSection button{
+    font-size: 25px;
+    background-color: rgb(91, 244, 91);
+    margin: 10px;
+    padding: 10px;
+}
+.TimerSection button:hover{
+    translate: none;
+}
+#AboutSection1{
+    display: flex;
+    margin-top: 10px;
+}
+#AboutSection1-1{
+    padding: 10px; 
+    font-weight: 600; 
+    font-size: 25px;
+}
+#AboutSection2 {
+    font-weight: 600;
+    font-size: 25px;
+    margin-left: 5px;
+    margin-top: 10px;
+}
+#ExercisesSection{
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 10px; 
+    justify-content: space-evenly; 
+    padding: 10px;
+}
+#ExercisesSection button{
+    font-size: 25px;
+}
+#ExercisesSection div{
+    padding: 10px;
+}
+#ExercisesSection p{
+    font-size: 20px;
+}
+#ExercisesSection h2{
+    color: green;
+}
+#BreathingExercise, #RelaxingSounds, #BinauralSounds{
+    width: 700px;
+}
+
+
+@media screen and (max-width:768px){
+    .navbar-nav{
+        gap: 0px;
+    }
+    #AboutSection1{
+        flex-direction: column;
+    }
+    #AboutSection1 img{
+        width: 100%;
+    }
+}
+@media screen and (min-width:768px) and (max-width:1024px){
+    #AboutSection1{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    #AboutSection1 img{
+        width: 100%;
+    }
+    #BreathingExercise, #RelaxingSounds, #BinauralSounds{
+        width:90%
+    }
+}
+
+    
+
+
