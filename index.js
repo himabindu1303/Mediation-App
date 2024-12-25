@@ -26,7 +26,7 @@ function StartMeditate(a){
          clearInterval(Interval)
          // alert("meditation time is over")
          let TimerSectionAlarm = document.getElementById("TimerSection-alarm")
-         TimerSectionAlarm.innerHTML = `<audio controls autoplay> <source src="../../../../Downloads/The New Darker You - The Tower of Light.mp3"></audio>`
+         TimerSectionAlarm.innerHTML = `<audio controls autoplay> <source src="./audios/The New Darker You - The Tower of Light.mp3"></audio>`
          let audio = TimerSectionAlarm.querySelector("audio")
          audio.addEventListener("pause",()=> TimerSectionAlarm.remove())
       }
