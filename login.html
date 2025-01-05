@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <link rel="icon" href="https://lh3.googleusercontent.com/proxy/CutdJG3OOscYLUUsT7_NHIGdYh8eayhNvQMnQpbSb4NEBQszEoiyzp9SVbHDA5s4cmBzopvocLuPOwEIE3JJaj_Xs2TjvOgk7KODOQ0PHpHlwpJB">
+    
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            background-image: url("https://media.istockphoto.com/id/1295841366/vector/abstract-geometric-background-polygonal-mosaic-with-pink-gradient.jpg?s=612x612&w=0&k=20&c=xT4jPua0BFfIRliez8vKuM2ChoK1DEQx5OPnOiPm2Do=");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+        .container {
+            background-color: white;
+            padding: 40px 60px;
+        }
+        h1{
+            color: rgb(163, 21, 69);
+            text-align: center;
+        }
+        input{
+            width: 100%;
+        }
+        label, p, input, button{
+            font-size: 20px;
+        }
+        button{
+            background-color: rgb(163, 21, 69);
+            color: aliceblue;
+            cursor: pointer;
+            width: 10vw ;
+            padding: 5px 5px;
+        }
+        p {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Login</h1>
+
+        <form action="" id="form">
+            <label for="email">Email</label><br>
+            <input type="email" name="" id="email" required><br>
+            <p id="loginEmailError" class="error"></p>
+
+            <label for="password">Password</label><br>
+            <input type="password" name="" id="password" required><br>
+            <p id="loginPswdError" class="error"></p>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("form").addEventListener("submit", (event) => {
+            event.preventDefault()
+
+            document.getElementById("loginEmailError").textContent = "";
+            document.getElementById("loginPswdError").textContent = "";
+
+            let LoginEmail = document.getElementById("email").value.trim()
+            let LoginPassword = document.getElementById("password").value.trim()
+
+            let localemail = localStorage.getItem("Email")
+            let localpswd = localStorage.getItem("password")
+
+            let isLoginValid = true;
+
+            if (LoginEmail !== localemail) {
+                document.getElementById("loginEmailError").textContent = "Email not found. Please sign up first."
+                isLoginValid = false;
+            }
+
+            if (LoginPassword !== localpswd) {
+                document.getElementById("loginPswdError").textContent = "Incorrect password"
+                isLoginValid = false;
+            }
+
+            if (isLoginValid) {
+                // alert("Loginn Successfully")
+                window.location.href = "index.html"
+            }
+
+        })
+    </script>
+
+</body>
+
+</html>

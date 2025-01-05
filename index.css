@@ -34,8 +34,6 @@ button{
 button:hover{
     background-color: rgb(58, 219, 58);
     opacity: 0.8;
-    translate: 40px;
-    /* box-shadow: 3px 3px 3px black; */
 }
 .TimerSection div{
     text-align: center;

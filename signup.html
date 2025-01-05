@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="icon" href="https://lh3.googleusercontent.com/proxy/CutdJG3OOscYLUUsT7_NHIGdYh8eayhNvQMnQpbSb4NEBQszEoiyzp9SVbHDA5s4cmBzopvocLuPOwEIE3JJaj_Xs2TjvOgk7KODOQ0PHpHlwpJB">
+
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            background-image: url("https://media.istockphoto.com/id/1295841366/vector/abstract-geometric-background-polygonal-mosaic-with-pink-gradient.jpg?s=612x612&w=0&k=20&c=xT4jPua0BFfIRliez8vKuM2ChoK1DEQx5OPnOiPm2Do=");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+        .container {
+            background-color: white;
+            padding: 40px 50px;
+        }
+        h1{
+            color: rgb(163, 21, 69);
+            text-align: center;
+        }
+        label, p, input, button, a, span{
+            font-size: 20px;
+        }
+        a, p{
+            color: red;
+            text-decoration: none;
+        }
+        button{
+            background-color: rgb(163, 21, 69);
+            color: aliceblue;
+            cursor: pointer;
+            width: 10vw ;
+            padding: 5px 5px;
+        }
+        span, a{
+            color: rgb(163, 21, 69)
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>SignUp</h1>
+        <form action="" id="form">
+
+            <label for="email">Email</label><br>
+            <input type="email" name="" id="email" required>
+            <p id="p1"></p>
+
+            <label for="password">Password</label><br>
+            <input type="password" name="" id="password" required>
+            <p id="p2"></p>
+
+            <button type="submit">SignUp</button><br><br>
+            <span>Already registered user ?</span>
+            <a href="./login.html"> Login here</a>
+
+        </form>
+    </div>
+    <script>
+        document.getElementById("form").addEventListener("submit", (event) => {
+            event.preventDefault()
+            let emailpattern = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,}$/;
+            let passwordpattern = /^(?=(.*[a-z]){1,})(?=(.*[A-Z]){1,})(?=(.*[0-9]){1,})(?=(.*[$#@!%&()_.=]){1,})[a-zA-Z0-9$#@!%&()._=]{8,15}$/
+
+            document.getElementById("p1").textContent = ""
+            document.getElementById("p2").textContent = ""
+
+            let email = document.getElementById("email").value.trim()
+            let password = document.getElementById("password").value.trim()
+
+            let isSignup = true;
+
+            if (!emailpattern.test(email)) {
+                document.getElementById("p1").textContent = "please provide valid email"
+                isSignup = false;
+            }
+
+            if (!passwordpattern.test(password)) {
+                document.getElementById("p2").textContent = "format is not matched, please use minimum 1 caps,1 small,1 special character and 1 number in the format"
+                isSignup = false;
+            }
+
+            if (isSignup) {
+                localStorage.setItem("Email", email)
+                localStorage.setItem("password", password)
+                alert("Submit successfully")
+                window.location.href = "Login.html"
+            }
+        })
+
+    </script>
+</body>
+
+</html>
