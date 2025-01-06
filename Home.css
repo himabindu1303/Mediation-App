@@ -1,117 +1,189 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     background-image: url("https://static.vecteezy.com/system/resources/thumbnails/009/288/486/small/abstract-colorful-circles-illustration-background-light-multicolor-pattern-flat-design-style-vector.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-.navbar{
-    background-color: rgb(212, 252, 240);
+
+h1 {
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 50px;
+    font-style: italic;
+    color: rgb(199, 35, 89);
 }
-.navbar-nav{
-    margin-left: auto;
-    gap: 20px;
+
+.center-logo {
+    text-align: center;
+    margin-top: 20px;
 }
-.nav-link{
-    color: rgb(200, 84, 200);;
-    font-size: 20px;
+
+.center-logo img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
 }
-.nav-link:hover{
-    background-color: lightcoral;
+
+.TimerSection div {
+    text-align: center;
+    padding: 60px;
 }
-button{
-    padding: 5px;
-    margin-top: 10px ;
-    background-color: rgb(253, 46, 46);
+
+.TimerSection h2 {
+    font-size: 100px;
+}
+
+.TimerSection button {
+    padding: 20px;
+    margin-top: 10px;
+    margin: 10px;
+    font-size: 30px;
+    background-color: rgb(199, 35, 89);
     font-weight: 600;
     border-radius: 10px;
     box-shadow: 2px 2px 5px black;
 }
-button:hover{
-    background-color: rgb(58, 219, 58);
+
+.TimerSection button:hover {
+    background-color: rgb(62, 234, 62);
+    color: white;
     opacity: 0.8;
 }
-.TimerSection div{
-    text-align: center;
-    padding: 70px;
-}
-.TimerSection button{
-    font-size: 25px;
-    background-color:  rgb(58, 219, 58);
-    margin: 10px;
-    padding: 10px;
-}
-.TimerSection button:hover{
-    translate: none;
-    background-color:  rgb(155, 152, 152);
-}
-#AboutSection1{
+
+.explore {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+
+.explore-imgs img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+.explore-imgs {
+    display: flex;
+    flex-direction: column;
+}
+
+.explore-imgs p {
+    font-size: 30px;
+    text-align: center;
+    color: rgb(197, 34, 88);
     margin-top: 10px;
+    font-weight: bold;
 }
-#AboutSection1-1{
-    padding: 10px; 
-    font-weight: 600; 
-    font-size: 25px;
-}
-#AboutSection2 {
-    font-weight: 600;
-    font-size: 25px;
-    margin-left: 5px;
-    margin-top: 10px;
-}
-#ExercisesSection{
-    display: flex; 
-    flex-wrap: wrap; 
-    gap: 10px; 
-    justify-content: space-evenly; 
-    padding: 10px;
-}
-#ExercisesSection button{
-    font-size: 25px;
-}
-#ExercisesSection div{
-    padding: 10px;
-}
-#ExercisesSection p{
+
+.explore-imgs button {
+    background-color: rgb(199, 35, 89);
+    color: white;
+    padding: 10px 10px;
     font-size: 20px;
-}
-#ExercisesSection h2{
-    color: green;
-}
-#BreathingExercise, #RelaxingSounds, #BinauralSounds{
-    width: 700px;
+    margin-top: 10px;
+    border-radius: 10px;
 }
 
-
-@media screen and (max-width:768px){
-    .navbar-nav{
-        gap: 0px;
-    }
-    #AboutSection1{
-        flex-direction: column;
-    }
-    #AboutSection1 img{
-        width: 100%;
-    }
-}
-@media screen and (min-width:768px) and (max-width:1024px){
-    #AboutSection1{
-        flex-direction: column;
-        flex-wrap: wrap;
-    }
-    #AboutSection1 img{
-        width: 100%;
-    }
-    #BreathingExercise, #RelaxingSounds, #BinauralSounds{
-        width:90%
-    }
+.explore-imgs button:hover {
+    background-color: rgb(62, 234, 62);
 }
 
-    
+@media screen and (max-width:320px) {
+    h1 {
+        font-size: 30px;
+    }
 
+    .center-logo img {
+        max-width: 180px;
+        height: 180px;
+    }
 
+    .explore-imgs img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .explore-imgs p {
+        margin-top: 10px;
+        font-weight: 0;
+        font-size: 12px;
+    }
+
+    .explore-imgs button {
+        padding: 0px 0px;
+        margin-top: 10px;
+    }
+
+    .explore {
+        margin-top: 30px;
+    }
+
+    .TimerSection div {
+        padding: 0px;
+    }
+
+    .TimerSection h2 {
+        font-size: 50px;
+    }
+
+    .TimerSection button {
+        padding: 5px;
+        margin: 5px;
+        font-size: 20px;
+        font-weight: 300;
+    }
+}
+
+@media screen and (min-width:321px) and (max-width:426px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    .center-logo {
+        padding: 10px;
+    }
+
+    .center-logo img {
+        max-width: 200px;
+        height: 200px;
+    }
+
+    .TimerSection div {
+        padding: 0px;
+    }
+
+    .TimerSection h2 {
+        font-size: 60px;
+    }
+
+    .TimerSection button {
+        padding: 5px;
+        margin: 5px;
+        font-size: 20px;
+        font-weight: 300;
+    }
+
+    .explore-imgs img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .explore-imgs p {
+        margin-top: 10px;
+        font-weight: 0;
+        font-size: 15px;
+    }
+
+    .explore-imgs button {
+        padding: 0px 0px;
+        margin-top: 10px;
+    }
+
+}

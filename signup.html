@@ -68,8 +68,10 @@
             <input type="password" name="" id="password" required>
             <p id="p2"></p>
 
-        </form>
             <button type="submit">SignUp</button><br><br>
+
+        </form>
+        
             <span>Already registered user ?</span>
             <a href="./login.html"> Login here</a>
     </div>
@@ -101,7 +103,7 @@
                 localStorage.setItem("Email", email)
                 localStorage.setItem("password", password)
                 alert("Signup Successfully, You can login now!")
-                window.location.href = "Login.html"
+                window.location.href = "./login.html"
             }
         })
 
