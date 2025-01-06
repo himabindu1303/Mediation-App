@@ -31,6 +31,10 @@
         label, p, input, button, a, span{
             font-size: 20px;
         }
+        input{
+            padding: 5px 0px;
+            border-radius: 8px;
+        }
         a, p{
             color: red;
             text-decoration: none;
@@ -39,8 +43,8 @@
             background-color: rgb(163, 21, 69);
             color: aliceblue;
             cursor: pointer;
-            width: 10vw ;
-            padding: 5px 5px;
+            padding: 7px 35px;
+            border-radius: 8px;
         }
         span, a{
             color: rgb(163, 21, 69)
@@ -64,11 +68,10 @@
             <input type="password" name="" id="password" required>
             <p id="p2"></p>
 
+        </form>
             <button type="submit">SignUp</button><br><br>
             <span>Already registered user ?</span>
             <a href="./login.html"> Login here</a>
-
-        </form>
     </div>
     <script>
         document.getElementById("form").addEventListener("submit", (event) => {
@@ -97,7 +100,7 @@
             if (isSignup) {
                 localStorage.setItem("Email", email)
                 localStorage.setItem("password", password)
-                alert("Submit successfully")
+                alert("Signup Successfully, You can login now!")
                 window.location.href = "Login.html"
             }
         })

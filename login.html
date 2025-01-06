@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login page</title>
     <link rel="icon" href="https://lh3.googleusercontent.com/proxy/CutdJG3OOscYLUUsT7_NHIGdYh8eayhNvQMnQpbSb4NEBQszEoiyzp9SVbHDA5s4cmBzopvocLuPOwEIE3JJaj_Xs2TjvOgk7KODOQ0PHpHlwpJB">
-    
+
     <style>
         * {
             box-sizing: border-box;
@@ -24,25 +24,43 @@
             background-color: white;
             padding: 40px 60px;
         }
-        h1{
+        h1 {
             color: rgb(163, 21, 69);
             text-align: center;
         }
-        input{
-            width: 100%;
+        input {
+            border-radius: 8px;
         }
-        label, p, input, button{
+        #inputs input{
+            width: 100%;
+            font-size: 20px;
+            padding: 5px 0px;
+        }
+        label, p , button{
             font-size: 20px;
         }
-        button{
+        #inputs input,button{
+            border-radius: 8px;
+        }
+        button {
             background-color: rgb(163, 21, 69);
             color: aliceblue;
             cursor: pointer;
-            width: 10vw ;
-            padding: 5px 5px;
+            padding: 7px 35px;
         }
         p {
             color: red;
+        }
+        .account {
+            color: black;
+            text-align: center;
+        }
+        .account a {
+            color: rgb(163, 21, 69);
+            text-decoration: none;
+        }
+        .account a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -52,16 +70,22 @@
         <h1>Login</h1>
 
         <form action="" id="form">
-            <label for="email">Email</label><br>
-            <input type="email" name="" id="email" required><br>
-            <p id="loginEmailError" class="error"></p>
+            <div id="inputs">
+                <label for="email">Email</label><br>
+                <input type="email" name="" id="email" required>
+                <!-- <p style="color: rgb(183, 180, 180);">Guest_id: User@gmail.com</p> -->
+                <p id="loginEmailError" class="error"></p>
 
-            <label for="password">Password</label><br>
-            <input type="password" name="" id="password" required><br>
-            <p id="loginPswdError" class="error"></p>
+                <label for="password">Password</label><br>
+                <input type="password" name="" id="password" required>
+                <!-- <p style="color: rgb(183, 180, 180);">Guest_Pass: User@1234</p> -->
+                <p id="loginPswdError" class="error"></p>
+            </div>
 
-            <button type="submit">Login</button>
         </form>
+        <button type="submit">Login</button>
+        <p class="account"><a href="./ForgotPassword.html">Forgot Password?</a></p>
+        <p class="account">Don't have an account ?<a href="./signup.html"> SignUp here</a></p>
     </div>
 
     <script>
@@ -90,10 +114,9 @@
             }
 
             if (isLoginValid) {
-                // alert("Loginn Successfully")
-                window.location.href = "index.html"
+                alert("Login Successfully, Enjoy the meditation app")
+                window.location.href = "Home.html"
             }
-
         })
     </script>
 
